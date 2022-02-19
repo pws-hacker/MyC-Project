@@ -322,8 +322,6 @@ void SpeechManager::clearRecord()
 {
 	cout << "确认清空？" << endl;
 	cout << "1、确认 2、返回" << endl;
-	cout << endl;
-	cout << endl;
 	int select = 0;
 	cin >> select;
 
