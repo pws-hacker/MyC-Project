@@ -23,7 +23,7 @@ void SpeechManager::show_Menu()
 	cout << "************   1.开始演讲比赛   *******************" << endl;
 	cout << "************   2.查看往届记录   *******************" << endl;
 	cout << "************   3.清空比赛记录   *******************" << endl;
-	cout << "************   3.推出比赛程序   *******************" << endl;
+	cout << "************   0.退出比赛程序   *******************" << endl;
 	cout << "***************************************************" << endl;
 	cout << endl;
 };
@@ -327,10 +327,19 @@ void SpeechManager::clearRecord()
 
 	if (select == 1)
 	{
+		// 打开模式 ios::trunc  如果存在则删除文件并重新创建
+		ofstream ofs("speech.csv", ios::trunc);
+		ofs.close();
+
 		// 初始化属性
 		this->initSpeech();
 
 		// 创建选手
 		this->createSpeaker();
+
+		// 获取往届记录
+		this->loadRecord();
+
+		cout << "清空成功" << endl;
 	}
 }

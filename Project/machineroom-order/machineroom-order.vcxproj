@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3ae6fc62-b4aa-46ac-a185-d5dd8bf364fe}</ProjectGuid>
-    <RootNamespace>oratoricalcontest</RootNamespace>
+    <ProjectGuid>{d77716ea-fdd3-4917-a3d1-567256d08af7}</ProjectGuid>
+    <RootNamespace>machineroomorder</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -35,7 +35,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -102,6 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -140,11 +141,21 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="speechManager.cpp" />
+    <ClCompile Include="manager.cpp" />
+    <ClCompile Include="order_file.cpp" />
+    <ClCompile Include="student.cpp" />
+    <ClCompile Include="teacher.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="speaker.h" />
-    <ClInclude Include="speechManager.h" />
+    <ClInclude Include="computer_room.h" />
+    <ClInclude Include="global_file.h" />
+    <ClInclude Include="identity.h" />
+    <ClInclude Include="manager.h" />
+    <ClInclude Include="order_file.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="student.h" />
+    <ClInclude Include="teacher.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
